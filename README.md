@@ -20,6 +20,7 @@ It contains various options in OptionScene:
 - BGVolume
 - FXVolume
 - Reset High Score
+- Switching the control scheme
 
 ##How do I use SBSkeleton?
 
