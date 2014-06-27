@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Sprite/1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 497}, {9, 9}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {9, 9}}</string>
+			<key>sourceSize</key>
+			<string>{9, 9}</string>
+		</dict>
+		<key>Sprite/2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{12, 497}, {7, 7}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {7, 7}}</string>
+			<key>sourceSize</key>
+			<string>{9, 9}</string>
+		</dict>
+		<key>Sprite/3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{12, 506}, {5, 5}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{2, 2}, {5, 5}}</string>
+			<key>sourceSize</key>
+			<string>{9, 9}</string>
+		</dict>
+		<key>Sprite/4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 508}, {3, 3}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{3, 3}, {3, 3}}</string>
+			<key>sourceSize</key>
+			<string>{9, 9}</string>
+		</dict>
+		<key>Sprite/Hero.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{209, 330}, {48, 64}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {48, 64}}</string>
+			<key>sourceSize</key>
+			<string>{50, 66}</string>
+		</dict>
+		<key>Sprite/asteroid_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 371}, {113, 100}}</string>
+			<key>offset</key>
+			<string>{0, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 16}, {113, 100}}</string>
+			<key>sourceSize</key>
+			<string>{134, 127}</string>
+		</dict>
+		<key>Sprite/asteroid_2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{189, 252}, {76, 71}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 12}, {76, 71}}</string>
+			<key>sourceSize</key>
+			<string>{88, 91}</string>
+		</dict>
+		<key>Sprite/asteroid_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{109, 252}, {78, 99}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{6, 14}, {78, 99}}</string>
+			<key>sourceSize</key>
+			<string>{93, 128}</string>
+		</dict>
+		<key>Sprite/asteroid_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 252}, {117, 106}}</string>
+			<key>offset</key>
+			<string>{0, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{11, 7}, {117, 106}}</string>
+			<key>sourceSize</key>
+			<string>{140, 114}</string>
+		</dict>
+		<key>Sprite/asteroid_5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{103, 371}, {104, 111}}</string>
+			<key>offset</key>
+			<string>{2, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 5}, {104, 111}}</string>
+			<key>sourceSize</key>
+			<string>{128, 122}</string>
+		</dict>
+		<key>Sprite/crater.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 486}, {26, 9}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{1, 5}, {26, 9}}</string>
+			<key>sourceSize</key>
+			<string>{30, 18}</string>
+		</dict>
+		<key>Sprite/neptune.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {249, 249}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{6, 6}, {249, 249}}</string>
+			<key>sourceSize</key>
+			<string>{262, 262}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{512, 512}</string>
+		<key>textureFileName</key>
+		<string>Sprite.png</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8EBF35B9-B4CA-4893-A23D-89BDC3307D40</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RoidAvoid</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>017B000C-EAD3-419D-9206-D5EA2CD5B631</key>
+		<string>https://github.com/wilzh40/RoidAvoid.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RoidAvoid.spritebuilder/RoidAvoid.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>017B000C-EAD3-419D-9206-D5EA2CD5B631</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wilzh40/RoidAvoid.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>017B000C-EAD3-419D-9206-D5EA2CD5B631</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>017B000C-EAD3-419D-9206-D5EA2CD5B631</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RoidAvoid</string>
+		</dict>
+	</array>
+</dict>
+</plist>
