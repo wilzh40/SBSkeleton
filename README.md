@@ -24,8 +24,15 @@ It contains various options in OptionScene:
 
 ##How do I use SBSkeleton?
 
+Git clone this repo
+
+First rename the containing folder by adding a  ".spritebuilder" extension so it can opened by the editor.
+
 Double click the project name in Xcode slowly, and rename it to whatever you choose.
-You can also rename the containing folder, but make sure it has ".spritebuilder" in the name so it can be opened by the editor.
+
+You're ready to go! 
+
+
 
 
 ##Roadmap
