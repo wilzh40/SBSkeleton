@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1DCD33A3-FB2E-4D1D-8463-8E028CD8E996</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SBSkeleton</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3FAF6308-970E-461B-9FAE-934B335DC67F</key>
+		<string>https://github.com/wilzh40/SBSkeleton.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SBSkeleton.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3FAF6308-970E-461B-9FAE-934B335DC67F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wilzh40/SBSkeleton.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3FAF6308-970E-461B-9FAE-934B335DC67F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3FAF6308-970E-461B-9FAE-934B335DC67F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SBSkeleton.spritebuilder</string>
+		</dict>
+	</array>
+</dict>
+</plist>
