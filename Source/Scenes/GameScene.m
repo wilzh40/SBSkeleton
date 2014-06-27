@@ -12,7 +12,7 @@
 
 - (void) onEnter
 {
-    singleton = [Singleton sharedManager];
+    _singleton = [Singleton sharedManager];
     winSize = [[CCDirector sharedDirector]viewSize];
     
 	[super onEnter];
@@ -36,19 +36,19 @@
     self.multipleTouchEnabled = YES;
     
     // Physics properties config
-    physicsNode.debugDraw = NO;
-    if (physicsNode.collisionDelegate == Nil)
-        physicsNode.collisionDelegate = self;
+    _physicsNode.debugDraw = NO;
+    if (_physicsNode.collisionDelegate == Nil)
+        _physicsNode.collisionDelegate = self;
     
     // Resetting the singleton properties
-    singleton.firstGame = NO;
-    singleton.score = 0;
+    _singleton.firstGame = NO;
+    _singleton.score = 0;
     
     // Hiding the back button
-    back.visible = YES;
-    back.userInteractionEnabled = YES;
-    pause.visible = NO;
-    pause.userInteractionEnabled = NO;
+    _back.visible = YES;
+    _back.userInteractionEnabled = YES;
+    _pause.visible = NO;
+    _pause.userInteractionEnabled = NO;
     
     // Initing the accelerometer
     _motionManager = [[CMMotionManager alloc]init];
@@ -68,15 +68,15 @@
 {
     // Displays the high score
     int highScore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"] intValue ];
-    [highScoreLabel setString:[NSString stringWithFormat:@"%d",highScore]];
+    [_highScoreLabel setString:[NSString stringWithFormat:@"%d",highScore]];
 }
 
 #pragma mark Scheduler
 - (void) update:(CCTime) dt
 {
     // Increases the score by the second and updates it
-    singleton.score++;
-    [scoreLabel setString:[NSString stringWithFormat:@"%d",singleton.score]];
+    _singleton.score++;
+    [_scoreLabel setString:[NSString stringWithFormat:@"%d",_singleton.score]];
     
 }
 
@@ -85,26 +85,28 @@
 - (void) handleGameOver
 {
     // Sets score
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:singleton.score] forKey:@"Score"];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:_singleton.score] forKey:@"Score"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    int highScore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"] intValue ];
+    int _highScore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"] intValue ];
     
-    if (singleton.score>highScore){
+    if (_singleton.score>_highScore){
         // If score is higher than the highscore, saves the highscore!
-        highScore = singleton.score;
-        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:highScore] forKey:@"HighScore"];
+        _highScore = _singleton.score;
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:_highScore] forKey:@"HighScore"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         // There is a high score in town!
         [[NSUserDefaults standardUserDefaults] setBool:YES  forKey:@"HighScoreBool"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
     }
+    
+    
     // Plays game over screen at on the same layer
     
     CCScene *GameOverScene = [CCBReader loadAsScene:@"GameOverScene"];
     [[CCDirector sharedDirector]replaceScene:GameOverScene withTransition:[CCTransition transitionCrossFadeWithDuration:0.5f]];
     
-    singleton.firstGame = YES;
+    _singleton.firstGame = YES;
 }
 
 
@@ -112,28 +114,28 @@
 {
     
     // Displays a blurred background
-    [singleton storeBlurredSprite:self];
-    blurredSprite = singleton.blurredSprite;
+    [_singleton storeBlurredSprite:self];
+    _blurredSprite = _singleton.blurredSprite;
     
     CCActionFiniteTime *fadeOut = [CCActionFadeOut actionWithDuration:1.0f];
     CCActionFiniteTime *fadeIn = [CCActionFadeOut actionWithDuration:1.0f];
     
-    [blurredSprite runAction:[CCActionSequence actionWithArray:@[fadeOut,fadeIn]]];
+    [_blurredSprite runAction:[CCActionSequence actionWithArray:@[fadeOut,fadeIn]]];
     
-    [self addChild:blurredSprite];
+    [self addChild:_blurredSprite];
     
     // Enable the Back Button
-    back.zOrder = 100;
-    back.visible = YES;
-    back.userInteractionEnabled = YES;
-    pause.visible = NO;
-    pause.userInteractionEnabled = NO;
+    _back.zOrder = 100;
+    _back.visible = YES;
+    _back.userInteractionEnabled = YES;
+    _pause.visible = NO;
+    _pause.userInteractionEnabled = NO;
     
     
     // [blurredSprite runAction:[CCActionFadeTo actionWithDuration:0.1f opacity:0.0f]];
     
-    [back runAction:[CCActionFadeTo actionWithDuration:0.1f opacity:0.0f]];
-    [back runAction:[CCActionFadeTo actionWithDuration:1.0f opacity:1.0f]];
+    [_back runAction:[CCActionFadeTo actionWithDuration:0.1f opacity:0.0f]];
+    [_back runAction:[CCActionFadeTo actionWithDuration:1.0f opacity:1.0f]];
     // Pauses the Game
     self.paused = true;
     
@@ -141,11 +143,11 @@
 
 - (void) handleResumeGame
 {
-    [self removeChild:blurredSprite];
-    back.visible = NO;
-    back.userInteractionEnabled = NO;
-    pause.visible = YES;
-    pause.userInteractionEnabled = YES;
+    [self removeChild:_blurredSprite];
+    _back.visible = NO;
+    _back.userInteractionEnabled = NO;
+    _pause.visible = YES;
+    _pause.userInteractionEnabled = YES;
     
     self.paused = false;
     
@@ -178,7 +180,7 @@
 
 - (void) updateAccelerometer
 {
-    if (singleton.controlScheme == kAccelerometer) {
+    if (_singleton.controlScheme == kAccelerometer) {
         
     }
 }

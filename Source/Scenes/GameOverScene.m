@@ -14,25 +14,24 @@
 - (void) onEnter
 {
     
-    singleton = [Singleton sharedManager];
+    _singleton = [Singleton sharedManager];
     [self setScore];
     [super onEnter];
 }
 
 - (void) setScore
 {
-    int score = [[[NSUserDefaults standardUserDefaults] objectForKey:@"Score"] intValue ];
-    NSLog(@"SCORE:%i",score);
-    [scoreLabel setString:[NSString stringWithFormat:@"%i",score]];
+    int _score = [[[NSUserDefaults standardUserDefaults] objectForKey:@"Score"] intValue ];
+    NSLog(@"SCORE:%i",_score);
+    [_scoreLabel setString:[NSString stringWithFormat:@"%i",_score]];
     
-    int highScore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"] intValue ];
+    int _highScore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"] intValue ];
     
-    [highScoreLabel setString:[NSString stringWithFormat:@"%i",highScore]];
+    [_highScoreLabel setString:[NSString stringWithFormat:@"%i",_highScore]];
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HighScoreBool"] == YES){
-        // If there's a new high score
-        highScoreLabel.opacity = 0;
-        highScoreLabelHeader.opacity = 0;
-        [yourScoreLabel setString:[NSString stringWithFormat:@"New High Score!"]];
+        // If there's a new high highScoreLabel.opacity = 0;
+        _highScoreLabelHeader.opacity = 0;
+        [_yourScoreLabel setString:[NSString stringWithFormat:@"New High Score!"]];
         // Resets for next time
         
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"HighScoreBool"];
@@ -46,7 +45,7 @@
     
     [[CCDirector sharedDirector]replaceScene:mainMenu withTransition:[CCTransition transitionFadeWithDuration:0.5f]];
     [[OALSimpleAudio sharedInstance] playBg:@"Synth.mp3" loop:YES];
-    singleton.firstGame = YES;
+    _singleton.firstGame = YES;
 }
 
 - (void) handleRestartGame
@@ -54,7 +53,7 @@
     CCScene *gameScene = [CCBReader loadAsScene:@"GameScene"];
     
     [[CCDirector sharedDirector]replaceScene:gameScene withTransition:[CCTransition transitionFadeWithDuration:0.5f]];
-    singleton.firstGame = YES;
+    _singleton.firstGame = YES;
 }
 
 @end

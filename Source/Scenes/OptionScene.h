@@ -11,10 +11,10 @@
 #import "Singleton.h"
 #import <CoreMotion/CoreMotion.h>
 @interface OptionScene : CCNode {
-    CCSlider *backgroundVolume, *effectsVolume;
-    CCButton *controlScheme;
-    Singleton *singleton;
-    CGPoint calibrationVector;
+    CCSlider *_backgroundVolume, *_effectsVolume;
+    CCButton *_controlScheme;
+    Singleton *_singleton;
+    CGPoint _calibrationVector;
     CMMotionManager *_motionManager;
 }
 

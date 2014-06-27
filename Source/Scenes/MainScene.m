@@ -14,11 +14,11 @@
 {
     // Displays the current high score
     int highScore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"] intValue ];
-    [highScoreLabel setString:[NSString stringWithFormat:@"High Score: %i",highScore]];
+    [_highScoreLabel setString:[NSString stringWithFormat:@"High Score: %i",highScore]];
     
     // Syncs the singleton's control scheme with the previous session
-    Singleton *singleton = [Singleton sharedManager];
-    singleton.controlScheme = [[[NSUserDefaults standardUserDefaults] objectForKey:@"ControlScheme"]intValue];
+    Singleton *_singleton = [Singleton sharedManager];
+    _singleton.controlScheme = [[[NSUserDefaults standardUserDefaults] objectForKey:@"ControlScheme"]intValue];
     
     [super onEnter];
 }

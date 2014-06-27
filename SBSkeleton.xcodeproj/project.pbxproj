@@ -21,7 +21,6 @@
 		774C855819384D0300DB8174 /* Synth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 774C855719384D0300DB8174 /* Synth.mp3 */; };
 		774C855A19384E3300DB8174 /* Piano.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 774C855919384E3300DB8174 /* Piano.m4a */; };
 		779FB0C919398EED0060CFC7 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779FB0C819398EED0060CFC7 /* GLKit.framework */; };
-		77B7DEBF1932298F00562866 /* thud.caf in Resources */ = {isa = PBXBuildFile; fileRef = 77B7DEBE1932298F00562866 /* thud.caf */; };
 		77B7DED119343BCA00562866 /* Jazz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77B7DED019343BCA00562866 /* Jazz.mp3 */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -89,7 +88,6 @@
 		774C855719384D0300DB8174 /* Synth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Synth.mp3; sourceTree = "<group>"; };
 		774C855919384E3300DB8174 /* Piano.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Piano.m4a; sourceTree = "<group>"; };
 		779FB0C819398EED0060CFC7 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		77B7DEBE1932298F00562866 /* thud.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = thud.caf; path = "Published-iOS/Sounds/thud.caf"; sourceTree = "<group>"; };
 		77B7DED019343BCA00562866 /* Jazz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Jazz.mp3; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -283,7 +281,6 @@
 				774C855919384E3300DB8174 /* Piano.m4a */,
 				77B7DED019343BCA00562866 /* Jazz.mp3 */,
 				774C855719384D0300DB8174 /* Synth.mp3 */,
-				77B7DEBE1932298F00562866 /* thud.caf */,
 				77603976193157520054E6FD /* Music */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
@@ -392,7 +389,6 @@
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				774C855819384D0300DB8174 /* Synth.mp3 in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
-				77B7DEBF1932298F00562866 /* thud.caf in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				774C855A19384E3300DB8174 /* Piano.m4a in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,

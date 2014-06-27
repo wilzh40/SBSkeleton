@@ -15,19 +15,19 @@
 {
 
     // First syncs the sliderValues to the previous session
-    backgroundVolume.sliderValue = [[[NSUserDefaults standardUserDefaults] objectForKey:@"BGVolume"]floatValue];
-    effectsVolume.sliderValue = [[[NSUserDefaults standardUserDefaults] objectForKey:@"FXVolume"]floatValue];
+    _backgroundVolume.sliderValue = [[[NSUserDefaults standardUserDefaults] objectForKey:@"BGVolume"]floatValue];
+    _effectsVolume.sliderValue = [[[NSUserDefaults standardUserDefaults] objectForKey:@"FXVolume"]floatValue];
     
     // Changes the button text based on the control scheme
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"ControlScheme"]intValue] == kTouch) {
-        controlScheme.title = [NSString stringWithFormat:@"Control Scheme: Touch"];
+        _controlScheme.title = [NSString stringWithFormat:@"Control Scheme: Touch"];
     }
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"ControlScheme"]intValue] == kAccelerometer) {
-        controlScheme.title = [NSString stringWithFormat:@"Control Scheme: Accelerometer"];
+        _controlScheme.title = [NSString stringWithFormat:@"Control Scheme: Accelerometer"];
     }
     
     // Inits various managers
-    singleton = [Singleton sharedManager];
+    _singleton = [Singleton sharedManager];
     _motionManager = [[CMMotionManager alloc]init];
     [_motionManager startAccelerometerUpdates];
     self.userInteractionEnabled = TRUE;
@@ -65,8 +65,8 @@
     CMAccelerometerData *accelerometerData = _motionManager.accelerometerData;
     CMAcceleration acceleration = accelerometerData.acceleration;
 
-    singleton.calibrationVector = ccp(acceleration.y,acceleration.x);
-    NSLog(@"Set Calibration Vector:%f,%f",singleton.calibrationVector.y,singleton.calibrationVector.x);
+    _singleton.calibrationVector = ccp(acceleration.y,acceleration.x);
+    NSLog(@"Set Calibration Vector:%f,%f",_singleton.calibrationVector.y,_singleton.calibrationVector.x);
 
 }
 
@@ -75,12 +75,12 @@
     // Switches the control scheme based on the current one
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"ControlScheme"]intValue] == kTouch) {
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:kAccelerometer] forKey:@"ControlScheme"];
-       [controlScheme setTitle:[NSString stringWithFormat:@"Control Scheme: Accelerometer"]];
+       [_controlScheme setTitle:[NSString stringWithFormat:@"Control Scheme: Accelerometer"]];
     
     }
     else if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"ControlScheme"]intValue] == kAccelerometer) {
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:kTouch] forKey:@"ControlScheme"];
-        [controlScheme setTitle:[NSString stringWithFormat:@"Control Scheme: Touch"]];
+        [_controlScheme setTitle:[NSString stringWithFormat:@"Control Scheme: Touch"]];
     }
 
     NSLog(@"Changed Control Scheme to :%@",

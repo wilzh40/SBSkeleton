@@ -19,17 +19,17 @@ enum HeroMovement {
 
 @interface GameScene : CCNode <CCPhysicsCollisionDelegate,UIAccelerometerDelegate> {
     CGSize winSize;
-    Singleton *singleton;
-    CCPhysicsNode *physicsNode;
+    Singleton *_singleton;
+    CCPhysicsNode *_physicsNode;
    
    
-    CCNode *bgColor;
+    CCNode *_bgColor;
     
-    CCLabelTTF *scoreLabel;
-    CCLabelTTF *highScoreLabel;
+    CCLabelTTF *_scoreLabel;
+    CCLabelTTF *_highScoreLabel;
     
-    CCSprite *blurredSprite;
-    CCButton *back, *pause;
+    CCSprite *_blurredSprite;
+    CCButton *_back, *_pause;
     
     CMMotionManager *_motionManager;
     
