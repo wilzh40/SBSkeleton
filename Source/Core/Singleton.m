@@ -54,6 +54,7 @@
     _blurredSprite = [CCSprite spriteWithTexture:texture];
     _blurredSprite.position = ccp(winSize.width/2, winSize.height/2);
     [_blurredSprite setEffect:[CCEffectGaussianBlur effectWithBlurStrength:0.005f direction:GLKVector2Make(0, 0)]];
+    // It's flipped for some reason
     _blurredSprite.scaleY *= -1;
     
     [self setBlurredSprite:_blurredSprite];
@@ -61,7 +62,7 @@
 }
 -(UIImage *)screenshotWithNode:(CCNode*)node
 {
-    //[CCDirector sharedDirector].nextDeltaTimeZero = YES;
+    // [CCDirector sharedDirector].nextDeltaTimeZero = YES;
     
     CGSize winSize = [[CCDirector sharedDirector]viewSize];
     CCRenderTexture* rtx = [CCRenderTexture renderTextureWithWidth:winSize.width

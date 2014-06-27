@@ -70,8 +70,9 @@
 
 - (void) setAudio
 {
-    [[OALSimpleAudio sharedInstance] preloadEffect:@"thud.caf"];
-    [[OALSimpleAudio sharedInstance] playBg:@"Synth.mp3" loop:YES];
+    // Preload your own audio here
+    //[[OALSimpleAudio sharedInstance] preloadEffect:@"thud.caf"];
+    //[[OALSimpleAudio sharedInstance] playBg:@"Synth.mp3" loop:YES];
     [OALSimpleAudio sharedInstance].bgVolume = [[[NSUserDefaults standardUserDefaults]objectForKey:@"BGVolume"]floatValue];
     
     [OALSimpleAudio sharedInstance].effectsVolume = [[[NSUserDefaults standardUserDefaults]objectForKey:@"FXVolume"]floatValue];

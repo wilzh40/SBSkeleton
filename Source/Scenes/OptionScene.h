@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 #import "Singleton.h"
 #import <CoreMotion/CoreMotion.h>
+
 @interface OptionScene : CCNode {
     CCSlider *_backgroundVolume, *_effectsVolume;
     CCButton *_controlScheme;

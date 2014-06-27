@@ -188,13 +188,6 @@
 			path = Source/Classes;
 			sourceTree = "<group>";
 		};
-		77603976193157520054E6FD /* Music */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Music;
-			sourceTree = "<group>";
-		};
 		9222E2B918734FF800A246C7 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +274,6 @@
 				774C855919384E3300DB8174 /* Piano.m4a */,
 				77B7DED019343BCA00562866 /* Jazz.mp3 */,
 				774C855719384D0300DB8174 /* Synth.mp3 */,
-				77603976193157520054E6FD /* Music */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
 			);
