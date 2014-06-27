@@ -51,7 +51,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"HighScore"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     // Kills the highscore
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"HighScoreBool"];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"HighScoreBool"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     NSLog(@"Reset High Score");
@@ -82,7 +82,9 @@
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:kTouch] forKey:@"ControlScheme"];
         [controlScheme setTitle:[NSString stringWithFormat:@"Control Scheme: Touch"]];
     }
-    NSLog(@"Changed Control Scheme!");
+
+    NSLog(@"Changed Control Scheme to :%@",
+          ([[[NSUserDefaults standardUserDefaults]objectForKey:@"ControlScheme"]intValue]==1)?@"Accel":@"Touch");
 
 }
 

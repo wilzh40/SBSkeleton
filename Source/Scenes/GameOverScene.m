@@ -28,14 +28,14 @@
     int highScore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"] intValue ];
     
     [highScoreLabel setString:[NSString stringWithFormat:@"%i",highScore]];
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScoreBool"] intValue ]==1){
-        //If there's a new high score
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HighScoreBool"] == YES){
+        // If there's a new high score
         highScoreLabel.opacity = 0;
         highScoreLabelHeader.opacity = 0;
         [yourScoreLabel setString:[NSString stringWithFormat:@"New High Score!"]];
-        //Resets for next time
+        // Resets for next time
         
-        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"HighScoreBool"];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"HighScoreBool"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
@@ -54,7 +54,6 @@
     CCScene *gameScene = [CCBReader loadAsScene:@"GameScene"];
     
     [[CCDirector sharedDirector]replaceScene:gameScene withTransition:[CCTransition transitionFadeWithDuration:0.5f]];
-    
     singleton.firstGame = YES;
 }
 

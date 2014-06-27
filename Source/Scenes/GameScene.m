@@ -95,7 +95,7 @@
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:highScore] forKey:@"HighScore"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         // There is a high score in town!
-        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"HighScoreBool"];
+        [[NSUserDefaults standardUserDefaults] setBool:YES  forKey:@"HighScoreBool"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
     }
