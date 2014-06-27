@@ -91,52 +91,10 @@
 			<key>format_ios_sound_quality</key>
 			<integer>0</integer>
 		</dict>
-		<key>Sounds/plasmaCannon_2.wav</key>
-		<dict>
-			<key>format_android_sound</key>
-			<integer>0</integer>
-			<key>format_android_sound_quality</key>
-			<integer>0</integer>
-			<key>format_ios_sound</key>
-			<integer>0</integer>
-			<key>format_ios_sound_quality</key>
-			<integer>0</integer>
-		</dict>
-		<key>Sounds/thud.wav</key>
-		<dict>
-			<key>format_android_sound</key>
-			<integer>0</integer>
-			<key>format_android_sound_quality</key>
-			<integer>0</integer>
-			<key>format_ios_sound</key>
-			<integer>0</integer>
-			<key>format_ios_sound_quality</key>
-			<integer>0</integer>
-		</dict>
 		<key>Sprite</key>
 		<dict>
 			<key>isSmartSpriteSheet</key>
 			<true/>
-		</dict>
-		<key>Sprite/1.png</key>
-		<dict>
-			<key>scaleFrom</key>
-			<integer>1</integer>
-		</dict>
-		<key>Sprite/2.png</key>
-		<dict>
-			<key>scaleFrom</key>
-			<integer>1</integer>
-		</dict>
-		<key>Sprite/3.png</key>
-		<dict>
-			<key>scaleFrom</key>
-			<integer>1</integer>
-		</dict>
-		<key>Sprite/4.png</key>
-		<dict>
-			<key>scaleFrom</key>
-			<integer>1</integer>
 		</dict>
 		<key>Sprites</key>
 		<dict/>

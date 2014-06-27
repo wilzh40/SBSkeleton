@@ -437,7 +437,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Made in 24 hours at dayofcode SF</string>
+							<string>Here are the credits:</string>
 							<false/>
 						</array>
 					</dict>
@@ -691,8 +691,6 @@
 						<false/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
