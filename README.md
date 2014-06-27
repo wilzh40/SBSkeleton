@@ -21,6 +21,11 @@ It contains various options in OptionScene:
 - FXVolume
 - Reset High Score
 
+##How do I use SBSkeleton?
+
+Double click the project name in Xcode slowly, and rename it to whatever you choose.
+You can also rename the containing folder, but make sure it has ".spritebuilder" in the name so it can be opened by the editor.
+
 
 ##Roadmap
 SBSkeleton is still a work in progress, and there are various flaws
@@ -28,6 +33,8 @@ I hope to fix, later on:
 - Improper accelerometer calibration
 - Bad programming syntax/conventions
 - Lack of comments
+- Fixing the credits for proper scrolling
+- Renaming the Singleton 
 
 
 
