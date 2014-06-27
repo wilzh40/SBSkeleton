@@ -15,7 +15,6 @@
     singleton = [Singleton sharedManager];
     winSize = [[CCDirector sharedDirector]viewSize];
     
-	
 	[super onEnter];
     [self setupScene];
 
@@ -33,9 +32,7 @@
 
 - (void) setupScene
 {
-  
     // Enabling touch
-    
     self.multipleTouchEnabled = YES;
     
     // Physics properties config
@@ -77,6 +74,7 @@
 #pragma mark Scheduler
 - (void) update:(CCTime) dt
 {
+    // Increases the score by the second and updates it
     singleton.score++;
     [scoreLabel setString:[NSString stringWithFormat:@"%d",singleton.score]];
     
@@ -86,13 +84,13 @@
 
 - (void) handleGameOver
 {
-    //Sets score
+    // Sets score
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:singleton.score] forKey:@"Score"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     int highScore = [[[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"] intValue ];
     
     if (singleton.score>highScore){
-        //If score is higher than the highscore, saves the highscore!
+        // If score is higher than the highscore, saves the highscore!
         highScore = singleton.score;
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:highScore] forKey:@"HighScore"];
         [[NSUserDefaults standardUserDefaults] synchronize];
@@ -101,7 +99,7 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
         
     }
-    //Plays game over screen at on the same layer
+    // Plays game over screen at on the same layer
     
     CCScene *GameOverScene = [CCBReader loadAsScene:@"GameOverScene"];
     [[CCDirector sharedDirector]replaceScene:GameOverScene withTransition:[CCTransition transitionCrossFadeWithDuration:0.5f]];
@@ -158,6 +156,7 @@
 
 - (void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    //Overwrite these functions to provide input functionality
 }
 
 - (void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event

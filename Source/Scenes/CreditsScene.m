@@ -13,6 +13,7 @@
 
 - (void) pressedBack
 {
+    // On the button press, go back to MainScene.m
     [[CCDirector sharedDirector]popSceneWithTransition:[CCTransition transitionFadeWithDuration:0.5f]];
 }
 

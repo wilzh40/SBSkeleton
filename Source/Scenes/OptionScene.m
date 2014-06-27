@@ -14,9 +14,11 @@
 - (void) onEnter
 {
 
+    // First syncs the sliderValues to the previous session
     backgroundVolume.sliderValue = [[[NSUserDefaults standardUserDefaults] objectForKey:@"BGVolume"]floatValue];
     effectsVolume.sliderValue = [[[NSUserDefaults standardUserDefaults] objectForKey:@"FXVolume"]floatValue];
     
+    // Changes the button text based on the control scheme
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"ControlScheme"]intValue] == kTouch) {
         controlScheme.title = [NSString stringWithFormat:@"Control Scheme: Touch"];
     }
@@ -24,13 +26,12 @@
         controlScheme.title = [NSString stringWithFormat:@"Control Scheme: Accelerometer"];
     }
     
-
+    // Inits various managers
     singleton = [Singleton sharedManager];
     _motionManager = [[CMMotionManager alloc]init];
-    
-    
     [_motionManager startAccelerometerUpdates];
-        self.userInteractionEnabled = TRUE;
+    self.userInteractionEnabled = TRUE;
+    
     [super onEnter];
 }
 
@@ -49,7 +50,7 @@
 {
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"HighScore"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    //Kills the highscore
+    // Kills the highscore
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"HighScoreBool"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
@@ -58,7 +59,9 @@
 
 - (void) setCalibrationVector
 {
-  
+ 
+    // Sets the calibration vector based on the current tilt of the device
+    // Still buggy and needs integration with the z-axis
     CMAccelerometerData *accelerometerData = _motionManager.accelerometerData;
     CMAcceleration acceleration = accelerometerData.acceleration;
 
@@ -69,6 +72,7 @@
 
 - (void) setControlScheme
 {
+    // Switches the control scheme based on the current one
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"ControlScheme"]intValue] == kTouch) {
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:kAccelerometer] forKey:@"ControlScheme"];
        [controlScheme setTitle:[NSString stringWithFormat:@"Control Scheme: Accelerometer"]];

@@ -13,6 +13,7 @@
 
 - (void) onEnter
 {
+    
     singleton = [Singleton sharedManager];
     [self setScore];
     [super onEnter];
