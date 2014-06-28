@@ -676,8 +676,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1395,7 +1393,7 @@
 				<key>displayName</key>
 				<string>CCLabelTTF</string>
 				<key>memberVarAssignmentName</key>
-				<string>highScoreLabel</string>
+				<string>_highScoreLabel</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -1453,7 +1451,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string> </string>
+							<string>High Score:</string>
 							<false/>
 						</array>
 					</dict>
@@ -1589,6 +1587,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
