@@ -28,14 +28,8 @@ It contains various options in OptionScene:
 
 2.First rename the containing folder by adding a  ".spritebuilder" extension so it can opened by the editor.
 
-3.Double click the project name in Xcode slowly, and rename it to whatever you choose.
-
-4.Rename the identifier, target name and .app name under build settings
-
+3.[Change the App name](http://stackoverflow.com/questions/238980/how-to-change-the-name-of-an-ios-app/20418989#20418989)
 You're ready to go! 
-
-
-
 
 ##Roadmap
 SBSkeleton is still a work in progress, and there are various flaws
