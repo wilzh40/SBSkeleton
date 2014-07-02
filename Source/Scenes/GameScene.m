@@ -34,7 +34,7 @@
 {
     // Enabling touch
     self.multipleTouchEnabled = YES;
-    
+    self.userInteractionEnabled = YES;
     // Physics properties config
     _physicsNode.debugDraw = NO;
     if (_physicsNode.collisionDelegate == Nil)
@@ -45,10 +45,10 @@
     _singleton.score = 0;
     
     // Hiding the back button
-    _back.visible = YES;
-    _back.userInteractionEnabled = YES;
-    _pause.visible = NO;
-    _pause.userInteractionEnabled = NO;
+    _back.visible = NO;
+    _back.userInteractionEnabled = NO;
+    _pause.visible = YES;
+    _pause.userInteractionEnabled = YES;
     
     // Initing the accelerometer
     _motionManager = [[CMMotionManager alloc]init];
