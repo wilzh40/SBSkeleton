@@ -125,6 +125,7 @@
     [self addChild:_blurredSprite];
     
     // Enable the Back Button
+    
     _back.zOrder = 100;
     _back.visible = YES;
     _back.userInteractionEnabled = YES;
@@ -181,6 +182,27 @@
 - (void) updateAccelerometer
 {
     if (_singleton.controlScheme == kAccelerometer) {
+        
+        float X =  _motionManager.accelerometerData.acceleration.x;
+        float Y =  _motionManager.accelerometerData.acceleration.y;
+        float Z =  _motionManager.accelerometerData.acceleration.z;
+        GLKVector2 accel2d = {{0,0}};
+        GLKVector3 ax = {{1, 0, 0}};
+        GLKVector3 ay = {{-.63f, 0,-.92f}};
+        //  GLKVector3 ay = {{0,0,0}};
+        GLKVector3 az = GLKVector3Normalize(GLKVector3CrossProduct(ay, ax));
+        GLKVector3 xyz = {{X,Y,Z}};
+        ax = GLKVector3Normalize(GLKVector3CrossProduct(az, ay));
+        accel2d.x = GLKVector3DotProduct(xyz, ax);
+        accel2d.y = GLKVector3DotProduct(xyz, az);
+        
+        const float xSensitivity = 2.8f;
+        const float ySensitivity = 2.8f; //the magic numbers!
+        const float tiltAmplifier = 2;
+        
+        // Use vx and vy as final outputs
+        float vx = (accel2d.y) * tiltAmplifier * xSensitivity;
+        float vy = accel2d.x * tiltAmplifier * ySensitivity;
         
     }
 }

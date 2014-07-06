@@ -64,9 +64,11 @@
     // Still buggy and needs integration with the z-axis
     CMAccelerometerData *accelerometerData = _motionManager.accelerometerData;
     CMAcceleration acceleration = accelerometerData.acceleration;
-
-    _singleton.calibrationVector = ccp(acceleration.y,acceleration.x);
-    NSLog(@"Set Calibration Vector:%f,%f",_singleton.calibrationVector.y,_singleton.calibrationVector.x);
+    
+    // Insert your own calibration method here
+    
+    // _singleton.calibrationVector = ccp(acceleration.y,acceleration.x);
+    // NSLog(@"Set Calibration Vector:%f,%f",_singleton.calibrationVector.y,_singleton.calibrationVector.x);
 
 }
 
