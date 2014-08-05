@@ -160,6 +160,10 @@
 - (void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     //Overwrite these functions to provide input functionality
+    if (self.paused)
+        [self handleResumeGame];
+    else
+        [self handlePauseGame];
 }
 
 - (void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
