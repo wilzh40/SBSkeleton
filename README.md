@@ -17,16 +17,21 @@ It contains 5 scenes, all self-explanatory:
 ... and a Singleton
 
 It contains various options in OptionScene:
-- BGVolume
-- FXVolume
-- Reset High Score
+- Volume Controls
+- Resetting High Score
 - Switching the control scheme
+
+It also includes:
+- Detecting accelerometer velocity/movement
+- Pause functionatity
+- The latest cocos2d submodule version
 
 ##How do I use SBSkeleton?
 
-1.Git clone this repo
+1.Git clone this repo (recursively! It has cocos2d/chipmunk submodules.)
+	git clone https://github.com/wilzh40/SBSkeleton.git --recursive
 
-2.First rename the containing folder by adding a  ".spritebuilder" extension so it can opened by the editor.
+2.First rename the containing folder by adding a  ".spritebuilder" extension so it can opened by [SpriteBuilder](http://www.spritebuilder.com/)
 
 3.[Change the App name](http://stackoverflow.com/questions/238980/how-to-change-the-name-of-an-ios-app/20418989#20418989)
 You're ready to go! 
