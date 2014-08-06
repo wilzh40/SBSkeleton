@@ -1,6 +1,6 @@
 ##What is SBSkeleton?
 
-SB Skeleton is a simple barebones template for cocos2d v3.1 and SpriteBuilder, containing the skeleton to make a simple game. The scenes are in a landscape orientation, but everything is easily changeable. 
+SB Skeleton is a simple barebones template for cocos2d v3.x and SpriteBuilder, containing the skeleton to make a simple game. The scenes are in a landscape orientation, but everything is easily changeable. 
 
 ###Why?
 
