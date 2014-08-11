@@ -1,4 +1,4 @@
-[submodule "Source/libs/cocos2d-iphone"]
-	path = Source/libs/cocos2d-iphone
-	url = https://www.github.com/cocos2d/cocos2d-iphone.git
+[submodule "SBSkeleton.spritebuilder/Source/libs/cocos2d-iphone"]
+	path = SBSkeleton.spritebuilder/Source/libs/cocos2d-iphone
+	url = https://github.com/cocos2d/cocos2d-iphone.git
 	branch = develop
