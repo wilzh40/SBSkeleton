@@ -29,7 +29,7 @@ enum HeroMovement {
     CCLabelTTF *_highScoreLabel;
     
     CCSprite *_blurredSprite;
-    CCButton *_back, *_pause;
+    CCButton *_back, *_pause, *_menu;
     
     CMMotionManager *_motionManager;
     

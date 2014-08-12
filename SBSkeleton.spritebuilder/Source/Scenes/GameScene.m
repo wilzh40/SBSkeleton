@@ -44,11 +44,14 @@
     _singleton.firstGame = NO;
     _singleton.score = 0;
     
-    // Hiding the back button
+    // Hiding the back/menu buttons
+    _menu.visible = NO;
+    _menu.userInteractionEnabled = NO;
     _back.visible = NO;
     _back.userInteractionEnabled = NO;
     _pause.visible = YES;
     _pause.userInteractionEnabled = YES;
+    
     
     // Initing the accelerometer
     _motionManager = [[CMMotionManager alloc]init];
@@ -74,8 +77,8 @@
 #pragma mark Scheduler
 - (void) update:(CCTime) dt
 {
-    // Increases the score by the second and updates it
-    _singleton.score++;
+    // Updates the score label
+    //_singleton.score++;
     [_scoreLabel setString:[NSString stringWithFormat:@"%d",_singleton.score]];
     
 }
@@ -127,8 +130,11 @@
     // Enable the Back Button
     
     _back.zOrder = 100;
+    _menu.zOrder = 100;
     _back.visible = YES;
     _back.userInteractionEnabled = YES;
+    _menu.visible = YES;
+    _menu.userInteractionEnabled = YES;
     _pause.visible = NO;
     _pause.userInteractionEnabled = NO;
     
@@ -137,6 +143,8 @@
     
     [_back runAction:[CCActionFadeTo actionWithDuration:0.1f opacity:0.0f]];
     [_back runAction:[CCActionFadeTo actionWithDuration:1.0f opacity:1.0f]];
+    [_menu runAction:[CCActionFadeTo actionWithDuration:0.1f opacity:0.0f]];
+    [_menu runAction:[CCActionFadeTo actionWithDuration:1.0f opacity:1.0f]];
     // Pauses the Game
     self.paused = true;
     
@@ -147,6 +155,8 @@
     [self removeChild:_blurredSprite];
     _back.visible = NO;
     _back.userInteractionEnabled = NO;
+    _menu.visible = NO;
+    _menu.userInteractionEnabled = NO;
     _pause.visible = YES;
     _pause.userInteractionEnabled = YES;
     
@@ -155,20 +165,32 @@
     
 }
 
+- (void) handleMenu
+{
+    CCScene *scene = [CCBReader loadAsScene:@"MainScene"];
+    [[CCDirector sharedDirector]pushScene:scene withTransition:[CCTransition transitionFadeWithDuration:0.5f]];
+}
+
 #pragma mark User Interaction
 
 - (void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     //Overwrite these functions to provide input functionality
+    
+    /*
     if (self.paused)
         [self handleResumeGame];
     else
         [self handlePauseGame];
+     */
+    
+   
 }
 
 - (void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
-
+     _singleton.score++;
+    _bgColor.color = [CCColor colorWithCcColor4f:ccc4f(frandom_range(0, 1.0f), frandom_range(0, 1.0f), frandom_range(0,1.0f),frandom_range(0, 1.0f))];
 
 }
 
