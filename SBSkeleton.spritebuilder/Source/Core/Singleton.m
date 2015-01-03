@@ -26,8 +26,6 @@
     if (self = [super init]) {
         _firstGame = TRUE;
         _motionManager = [[CMMotionManager alloc] init];
-        
-        
         [self setDefaultVars];
     }
     return self;
@@ -57,9 +55,8 @@
     [self setBlurredSprite:_blurredSprite];
     
 }
--(UIImage *)screenshotWithNode:(CCNode*)node
+- (UIImage *) screenshotWithNode:(CCNode*)node
 {
-    // [CCDirector sharedDirector].nextDeltaTimeZero = YES;
     
     CGSize winSize = [[CCDirector sharedDirector]viewSize];
     CCRenderTexture* rtx = [CCRenderTexture renderTextureWithWidth:winSize.width

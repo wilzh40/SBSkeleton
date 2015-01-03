@@ -36,6 +36,7 @@
     // Enabling touch
     self.multipleTouchEnabled = YES;
     self.userInteractionEnabled = YES;
+    
     // Physics properties config
     _physicsNode.debugDraw = NO;
     if (_physicsNode.collisionDelegate == Nil)
@@ -52,7 +53,6 @@
     _back.userInteractionEnabled = NO;
     _pause.visible = YES;
     _pause.userInteractionEnabled = YES;
-    
     
     // Initing the accelerometer
     _motionManager = [[CMMotionManager alloc]init];
@@ -97,8 +97,6 @@
         // If score is higher than the highscore, saves the highscore!
         _highScore = _singleton.score;
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:_highScore] forKey:@"HighScore"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        // There is a high score in town!
         [[NSUserDefaults standardUserDefaults] setBool:YES  forKey:@"HighScoreBool"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
@@ -106,7 +104,6 @@
     
     
     // Plays game over screen at on the same layer
-    
     CCScene *GameOverScene = [CCBReader loadAsScene:@"GameOverScene"];
     [[CCDirector sharedDirector]replaceScene:GameOverScene withTransition:[CCTransition transitionCrossFadeWithDuration:0.5f]];
     
@@ -120,32 +117,13 @@
     // Displays a blurred background
     [_singleton storeBlurredSprite:self];
     _blurredSprite = _singleton.blurredSprite;
-    
-    CCActionFiniteTime *fadeOut = [CCActionFadeOut actionWithDuration:1.0f];
-    CCActionFiniteTime *fadeIn = [CCActionFadeOut actionWithDuration:1.0f];
-    
-    [_blurredSprite runAction:[CCActionSequence actionWithArray:@[fadeOut,fadeIn]]];
-    
     [self addChild:_blurredSprite];
     
     // Enable the Back Button
-    
     _back.zOrder = 100;
     _menu.zOrder = 100;
-    _back.visible = YES;
-    _back.userInteractionEnabled = YES;
-    _menu.visible = YES;
-    _menu.userInteractionEnabled = YES;
-    _pause.visible = NO;
-    _pause.userInteractionEnabled = NO;
+    [self toggleButtonVisibility];
     
-    
-    // [blurredSprite runAction:[CCActionFadeTo actionWithDuration:0.1f opacity:0.0f]];
-    
-    [_back runAction:[CCActionFadeTo actionWithDuration:0.1f opacity:0.0f]];
-    [_back runAction:[CCActionFadeTo actionWithDuration:1.0f opacity:1.0f]];
-    [_menu runAction:[CCActionFadeTo actionWithDuration:0.1f opacity:0.0f]];
-    [_menu runAction:[CCActionFadeTo actionWithDuration:1.0f opacity:1.0f]];
     // Pauses the Game
     self.paused = true;
     
@@ -154,15 +132,20 @@
 - (void) handleResumeGame
 {
     [self removeChild:_blurredSprite];
-    _back.visible = NO;
-    _back.userInteractionEnabled = NO;
-    _menu.visible = NO;
-    _menu.userInteractionEnabled = NO;
-    _pause.visible = YES;
-    _pause.userInteractionEnabled = YES;
-    
+    [self toggleButtonVisibility];
     self.paused = false;
     
+    
+}
+
+- (void) toggleButtonVisibility
+{
+    _back.visible = _back.visible ? NO : YES;
+    _back.userInteractionEnabled = _back.userInteractionEnabled ? NO : YES;
+    _menu.visible = _menu.visible ? NO : YES;
+    _menu.userInteractionEnabled = _menu.userInteractionEnabled ? NO : YES;
+    _pause.visible = _pause.visible ? NO : YES;
+    _pause.userInteractionEnabled = _pause.userInteractionEnabled ? NO : YES;
     
 }
 
@@ -178,12 +161,6 @@
 {
     //Overwrite these functions to provide input functionality
     
-    /*
-    if (self.paused)
-        [self handleResumeGame];
-    else
-        [self handlePauseGame];
-     */
     
    
 }
