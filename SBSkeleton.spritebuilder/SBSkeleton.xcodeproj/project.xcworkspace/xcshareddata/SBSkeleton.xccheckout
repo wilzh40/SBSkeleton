@@ -12,10 +12,14 @@
 	<dict>
 		<key>5D7004AFA0F8477414D2D2070527EE503A955943</key>
 		<string>https://github.com/cocos2d/cocos2d-iphone.git</string>
+		<key>65E71B0513DBFB09F39CEEF3A8B769CB93E66994</key>
+		<string>https://github.com/spritebuilder/ssziparchive.git</string>
 		<key>72F7AB51BBAB7FAC54000B0E949FAA006319EBAB</key>
 		<string>https://github.com/wilzh40/SBSkeleton.git</string>
 		<key>999D2B244F4BEADDDD09CD5EE2574031B24F399A</key>
 		<string>https://github.com/slembcke/Chipmunk2D.git</string>
+		<key>A21E964CF35F95307B1FB121F2B5F3025ACF2ED9</key>
+		<string>https://github.com/spritebuilder/ObjectAL-for-Cocos2D.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SBSkeleton.spritebuilder/SBSkeleton.xcodeproj</string>
@@ -23,10 +27,14 @@
 	<dict>
 		<key>5D7004AFA0F8477414D2D2070527EE503A955943</key>
 		<string>../../..SBSkeleton.spritebuilder/Source/libs/cocos2d-iphone</string>
+		<key>65E71B0513DBFB09F39CEEF3A8B769CB93E66994</key>
+		<string>../../../SBSkeleton.spritebuilder/Source/libs/cocos2d-iphone/external/SSZipArchive/</string>
 		<key>72F7AB51BBAB7FAC54000B0E949FAA006319EBAB</key>
 		<string>../../..</string>
 		<key>999D2B244F4BEADDDD09CD5EE2574031B24F399A</key>
 		<string>../../..SBSkeleton.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk</string>
+		<key>A21E964CF35F95307B1FB121F2B5F3025ACF2ED9</key>
+		<string>../../../SBSkeleton.spritebuilder/Source/libs/cocos2d-iphone/external/ObjectAL/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/wilzh40/SBSkeleton.git</string>
@@ -56,9 +64,25 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A21E964CF35F95307B1FB121F2B5F3025ACF2ED9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ObjectAL</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>72F7AB51BBAB7FAC54000B0E949FAA006319EBAB</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SBSkeleton</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>65E71B0513DBFB09F39CEEF3A8B769CB93E66994</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SSZipArchive</string>
 		</dict>
 	</array>
 </dict>
