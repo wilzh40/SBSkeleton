@@ -21,18 +21,18 @@ It contains various options in OptionScene:
 
 It also includes:
 - Detecting accelerometer velocity/movement
-- Pause functionatity
+- Pause functionality
 - The latest cocos2d submodule version
 
 ##Setup
 
-1. Git clone this repo (recursively! It has cocos2d/chipmunk submodules.)
+1. Git clone this repo recursively (it has cocos2d and its submodules)
 
 	git clone https://github.com/wilzh40/SBSkeleton.git --recursive
 
-2. Open the directory `SBSkeleton.spritebuilder` with [SpriteBuilder](http://www.spritebuilder.com/)
+2. Open the directory `SBSkeleton.spritebuilder` with [SpriteBuilder](http://www.spritebuilder.com/) and hit the publish button
 
-3. [Change the App name](http://stackoverflow.com/questions/238980/how-to-change-the-name-of-an-ios-app/20418989#20418989) and build targets
+3. [Change the App name](http://stackoverflow.com/questions/238980/how-to-change-the-name-of-an-ios-app/20418989#20418989) to your project name
 
 You're ready to go! 
  
