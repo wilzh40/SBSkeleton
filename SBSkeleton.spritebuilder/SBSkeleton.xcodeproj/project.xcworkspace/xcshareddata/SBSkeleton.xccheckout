@@ -10,31 +10,55 @@
 	<string>SBSkeleton</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>3FAF6308-970E-461B-9FAE-934B335DC67F</key>
+		<key>5D7004AFA0F8477414D2D2070527EE503A955943</key>
+		<string>https://github.com/cocos2d/cocos2d-iphone.git</string>
+		<key>72F7AB51BBAB7FAC54000B0E949FAA006319EBAB</key>
 		<string>https://github.com/wilzh40/SBSkeleton.git</string>
+		<key>999D2B244F4BEADDDD09CD5EE2574031B24F399A</key>
+		<string>https://github.com/slembcke/Chipmunk2D.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SBSkeleton.xcodeproj/project.xcworkspace</string>
+	<string>SBSkeleton.spritebuilder/SBSkeleton.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>3FAF6308-970E-461B-9FAE-934B335DC67F</key>
-		<string>../..</string>
+		<key>5D7004AFA0F8477414D2D2070527EE503A955943</key>
+		<string>../../..SBSkeleton.spritebuilder/Source/libs/cocos2d-iphone</string>
+		<key>72F7AB51BBAB7FAC54000B0E949FAA006319EBAB</key>
+		<string>../../..</string>
+		<key>999D2B244F4BEADDDD09CD5EE2574031B24F399A</key>
+		<string>../../..SBSkeleton.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/wilzh40/SBSkeleton.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3FAF6308-970E-461B-9FAE-934B335DC67F</string>
+	<string>72F7AB51BBAB7FAC54000B0E949FAA006319EBAB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3FAF6308-970E-461B-9FAE-934B335DC67F</string>
+			<string>999D2B244F4BEADDDD09CD5EE2574031B24F399A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>SBSkeleton.spritebuilder</string>
+			<string>Chipmunk</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5D7004AFA0F8477414D2D2070527EE503A955943</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cocos2d-iphone</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>72F7AB51BBAB7FAC54000B0E949FAA006319EBAB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SBSkeleton</string>
 		</dict>
 	</array>
 </dict>
