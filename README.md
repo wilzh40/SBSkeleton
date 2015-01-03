@@ -4,7 +4,7 @@
 SB Skeleton is a simple barebones template for cocos2d v3.x and SpriteBuilder, containing the skeleton to make a simple game. 
 
 ##Overview
-![MainMenuScene](http://imgur.com/i04ewGx)
+http://imgur.com/i04ewGx
 
 It contains 5 scenes, all self-explanatory: 
 - MainScene
