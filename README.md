@@ -4,7 +4,7 @@
 SB Skeleton is a simple barebones template for cocos2d v3.x and SpriteBuilder, containing the skeleton to make a simple game. 
 
 ##Overview
-![MainMenuScene](https://photos-4.dropbox.com/t/2/AAA5XxvH0pOK96YForIVRbuvO8WV9xV5-kzRHM-mrE4D0Q/12/282381352/png/1024x768/3/1420261200/0/2/Screenshot%202015-01-02%2019.39.20.png/CKiY04YBIAEoASgC/33PLAoRdA2T2iMjwsG-HHeG_1DytF5iOW_JyxXiFbp4)
+![MainMenuScene](http://imgur.com/i04ewGx)
 
 It contains 5 scenes, all self-explanatory: 
 - MainScene
@@ -28,7 +28,7 @@ It also includes:
 
 1. Git clone this repo recursively (it has cocos2d and its submodules)
 
-	git clone https://github.com/wilzh40/SBSkeleton.git --recursive
+	`git clone https://github.com/wilzh40/SBSkeleton.git --recursive`
 
 2. Open the directory `SBSkeleton.spritebuilder` with [SpriteBuilder](http://www.spritebuilder.com/) and publish the CCB Files
 
