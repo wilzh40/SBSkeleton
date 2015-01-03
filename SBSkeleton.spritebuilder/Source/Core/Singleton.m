@@ -33,10 +33,10 @@
 
 - (void) setDefaultVars
 {
-    NSMutableArray *vars = [NSMutableArray arrayWithObjects:@"ControlScheme", @"FXVolume", @"BGVolume", nil];
-    NSMutableArray *values = [NSMutableArray arrayWithObjects:[NSNumber numberWithInteger:0], [NSNumber numberWithFloat:0.5f], [NSNumber numberWithFloat:0.5f], nil];
+    NSMutableArray *vars = [NSMutableArray arrayWithObjects:@"ControlScheme", @"FXVolume", @"BGVolume",@"Muted",@"Tutorial", nil];
+    NSMutableArray *values = [NSMutableArray arrayWithObjects:[NSNumber numberWithInteger:0], [NSNumber numberWithFloat:0.5f], [NSNumber numberWithFloat:0.5f],[NSNumber numberWithBool:NO],[NSNumber numberWithBool:YES], nil];
     for (int index = 1; index < [vars count]; index++) {
-            if ([[NSUserDefaults standardUserDefaults]objectForKey:vars[index]] == nil) {
+        if ([[NSUserDefaults standardUserDefaults]objectForKey:vars[index]] == nil) {
             [[NSUserDefaults standardUserDefaults]setObject:[values objectAtIndex:index] forKey:[vars objectAtIndex:index]];
             
         }

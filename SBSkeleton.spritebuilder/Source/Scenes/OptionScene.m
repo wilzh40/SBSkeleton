@@ -14,11 +14,22 @@
 - (void) onEnter
 {
 
-    // First syncs the sliderValues to the previous session
+    // Reflect current settings in NSUserDefaults
     _backgroundVolume.sliderValue = [[[NSUserDefaults standardUserDefaults] objectForKey:@"BGVolume"]floatValue];
     _effectsVolume.sliderValue = [[[NSUserDefaults standardUserDefaults] objectForKey:@"FXVolume"]floatValue];
     
-    // Changes the button text based on the control scheme
+
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"Muted"]) {
+        _soundButton.opacity = 0.5f;
+        _soundButton.title = @"Muted";
+        [[OALSimpleAudio sharedInstance] setMuted:YES];
+        
+    } else {
+        [[OALSimpleAudio sharedInstance] setMuted:NO];
+        _soundButton.title = @"Not muted";
+        _soundButton.opacity = 1.0f;
+    }
+    
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"ControlScheme"]intValue] == kTouch) {
         _controlScheme.title = [NSString stringWithFormat:@"Control Scheme: Touch"];
     }
@@ -30,6 +41,7 @@
     _singleton = [Singleton sharedManager];
     _motionManager = [[CMMotionManager alloc]init];
     [_motionManager startAccelerometerUpdates];
+    
     self.userInteractionEnabled = TRUE;
     
     [super onEnter];
@@ -56,6 +68,7 @@
     
     NSLog(@"Reset High Score");
 }
+
 
 - (void) setCalibrationVector
 {
@@ -85,12 +98,33 @@
         [_controlScheme setTitle:[NSString stringWithFormat:@"Control Scheme: Touch"]];
     }
 
-    NSLog(@"Changed Control Scheme to :%@",
+    NSLog(@"Changed Control Scheme to : %@",
           ([[[NSUserDefaults standardUserDefaults]objectForKey:@"ControlScheme"]intValue]==1)?@"Accel":@"Touch");
 
 }
 
-- (void)valueChanged1:(CCSlider *)sender
+- (void) toggleSound
+{
+    // Mutes/unmutes sound
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"Muted"]boolValue] == NO) {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"Muted"];
+        _soundButton.opacity = 0.5f;
+        _soundButton.title = @"Muted";
+        [[OALSimpleAudio sharedInstance] setMuted:YES];
+        
+    } else {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:NO] forKey:@"Muted"];
+        _soundButton.opacity = 1.0f;
+        _soundButton.title = @"Not Muted";
+        [[OALSimpleAudio sharedInstance] setMuted:NO];
+
+    }
+    
+    NSLog(@"Muted: %@",[[[NSUserDefaults standardUserDefaults] objectForKey:@"Muted"]boolValue]? @"YES" : @"NO");
+    
+}
+
+- (void) valueChanged1:(CCSlider *)sender
 {
     // Change volume of your sounds
     [[OALSimpleAudio sharedInstance] setEffectsVolume:sender.sliderValue];
@@ -99,7 +133,7 @@
     [[NSUserDefaults standardUserDefaults]synchronize];
 }
 
-- (void)valueChanged2:(CCSlider *)sender
+- (void) valueChanged2:(CCSlider *)sender
 {
     // Change volume of your sounds
     [[OALSimpleAudio sharedInstance] setBgVolume:sender.sliderValue];

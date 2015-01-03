@@ -13,7 +13,7 @@
 
 @interface OptionScene : CCNode {
     CCSlider *_backgroundVolume, *_effectsVolume;
-    CCButton *_controlScheme;
+    CCButton *_controlScheme, *_soundButton;
     Singleton *_singleton;
     CGPoint _calibrationVector;
     CMMotionManager *_motionManager;

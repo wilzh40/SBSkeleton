@@ -71,9 +71,8 @@
 - (void) setAudio
 {
     // Preload your own audio here
-
+    [OALSimpleAudio sharedInstance].muted = [[[NSUserDefaults standardUserDefaults]objectForKey:@"Muted"]boolValue];
     [OALSimpleAudio sharedInstance].bgVolume = [[[NSUserDefaults standardUserDefaults]objectForKey:@"BGVolume"]floatValue];
-    
     [OALSimpleAudio sharedInstance].effectsVolume = [[[NSUserDefaults standardUserDefaults]objectForKey:@"FXVolume"]floatValue];
     
 }
