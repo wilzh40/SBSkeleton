@@ -16,3 +16,5 @@ xcuserdata
 DerivedData
 *.xcuserstate
 .DS_Store
+
+Source/Resources/Published-Android/

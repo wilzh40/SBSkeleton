@@ -198,11 +198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Scenes/GameScene.m"
-            timestampString = "429554743.242633"
+            timestampString = "441946651.665422"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-handlePauseGame"
             landmarkType = "5">
          </BreakpointContent>
@@ -214,11 +214,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Scenes/GameScene.m"
-            timestampString = "429555146.025696"
+            timestampString = "441946809.769243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "-touchBegan:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
